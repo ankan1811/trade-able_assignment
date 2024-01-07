@@ -16,7 +16,7 @@ The base URL for all endpoints is: `http://localhost:3000/`
 
 ## To Test (All comments written on the test file for each route)
 
-### (📌 Before testing , replace the 'authToken' fields in the 'everything.test.js' file with the actual token received during login from the /api/login route and always create a new user and his password,email)
+### (📌 Before testing , replace the 'authToken' fields in the 'everything.test.js' file with the actual token received during login from the /api/login route and always create a new user and his/her password,email)
 
 ### Now run npm test
 

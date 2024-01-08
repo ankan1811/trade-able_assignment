@@ -115,4 +115,20 @@ describe('GET /api/balance', () => {
         });
     });
   });
-  
+  describe('POST /api/referral/verify', () => {
+  it('should verify and use the referral link for the authenticated user', async () => {
+    const authToken = 'your_valid_jwt_token_here'; // Replace with your actual JWT token
+    const referralCode = 'your_referral_code_here'; // Replace with a valid referral code for testing which you received from /api/referral/generate route
+
+    await request(mainApp)
+      .post('/api/referral/verify')
+      .set('Authorization', `Bearer ${authToken}`)
+      .send({ code: referralCode })
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then((res) => {
+        expect(res.statusCode).toBe(200);
+        expect(res.body).toHaveProperty('message', 'Referral link verified and used successfully');
+      });
+  });
+});

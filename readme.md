@@ -18,7 +18,7 @@ The base URL for all endpoints is: `http://localhost:3000/`
 
 ### (📌 Before testing , replace the 'authToken' fields in the 'everything.test.js' file with the actual token received during login from the /api/login route and always create a new user and his/her password,email)
 
-### Now run npm test
+### 1. npm test
 
 #### (📌 The test of the /api/referral/expire route will not pass (return 400 bad request) if the referral link has not been used by 5 people or it hasnt been 5 days yet(I have set this))
 

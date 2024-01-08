@@ -117,7 +117,7 @@ describe('GET /api/balance', () => {
   });
   describe('POST /api/referral/verify', () => {
   it('should verify and use the referral link for the authenticated user', async () => {
-    const authToken = 'your_valid_jwt_token_here'; // Replace with your actual JWT token
+    const authToken = 'your_valid_jwt_token_here'; // Replace with your actual JWT token of the user who is getting referred
     const referralCode = 'your_referral_code_here'; // Replace with a valid referral code for testing which you received from /api/referral/generate route
 
     await request(mainApp)
